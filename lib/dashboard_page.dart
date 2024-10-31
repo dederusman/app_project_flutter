@@ -12,13 +12,13 @@ class DashboardPage extends StatefulWidget {
 class _DashboardPageState extends State<DashboardPage> {
   int _selectedIndex = 0;
 
-  // Daftar halaman untuk navigasi
+  
   final List<Widget> _pages = [];
 
   @override
   void initState() {
     super.initState();
-    // Menambahkan halaman dengan username yang diteruskan
+   
     _pages.add(HomePage(username: widget.username));
     _pages.add(SettingsPage());
     _pages.add(ProfilePage());
@@ -39,7 +39,7 @@ class _DashboardPageState extends State<DashboardPage> {
           IconButton(
             icon: Icon(Icons.logout),
             onPressed: () {
-              Navigator.pop(context); // Kembali ke halaman login
+              Navigator.pop(context); 
             },
           ),
         ],
@@ -53,7 +53,7 @@ class _DashboardPageState extends State<DashboardPage> {
           ),
         ),
         child: Center(
-          child: _pages[_selectedIndex], // Menampilkan halaman yang dipilih
+          child: _pages[_selectedIndex], 
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -78,7 +78,7 @@ class _DashboardPageState extends State<DashboardPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Logika untuk menambahkan konten baru
+          
           _showAddContentDialog(context);
         },
         child: Icon(Icons.add),
@@ -106,7 +106,7 @@ class _DashboardPageState extends State<DashboardPage> {
             TextButton(
               child: Text('Add'),
               onPressed: () {
-                // Logika untuk menambahkan konten
+               
                 Navigator.of(context).pop();
               },
             ),
